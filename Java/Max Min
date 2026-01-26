@@ -1,0 +1,7 @@
+public class Solution {
+    public int solve(ArrayList<Integer> A) {
+        Collections.sort(A);
+        int  n = A.size();
+        return A.get(0) + A.get(n-1);
+    }
+}
