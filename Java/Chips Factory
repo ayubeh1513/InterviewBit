@@ -1,0 +1,20 @@
+public class Solution {
+    public ArrayList<Integer> solve(ArrayList<Integer> A) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        int k=0;
+        for(int i : A){
+            if(i==0){
+                k++;
+            } else{
+                arr.add(i);
+            }
+        }
+        
+        while(k>0){
+            arr.add(0);
+            k--;
+        }
+        
+        return arr;
+    }
+}
