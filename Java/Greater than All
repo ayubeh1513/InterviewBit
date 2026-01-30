@@ -1,0 +1,14 @@
+public class Solution {
+    public int solve(ArrayList<Integer> A) {
+        int max = A.get(0);
+        int c = 1;
+        for(int i=1; i<A.size(); i++){
+            if(max<A.get(i)){
+                max=A.get(i);
+                c++;
+            }
+        }
+        
+        return c;
+    }
+}
