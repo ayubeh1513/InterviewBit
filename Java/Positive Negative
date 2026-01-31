@@ -1,0 +1,18 @@
+public class Solution {
+    public ArrayList<Integer> solve(ArrayList<Integer> A) {
+        int n = 0;
+        int p = 0;
+        ArrayList<Integer> arr = new ArrayList<>();
+        for(int i : A){
+            if(i<0){
+                n++;
+            }
+            if(i>0){
+                p++;
+            }
+        }
+        arr.add(p);
+        arr.add(n);
+        return arr;
+    }
+}
