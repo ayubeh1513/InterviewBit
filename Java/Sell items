@@ -1,0 +1,18 @@
+public class Solution {
+    public int solve(int A, int B) {
+        int m = B%A;
+        int n = B/A;
+        if(m!=0){
+            n+=1;
+        }
+        
+        int wm = n%5;
+        int w = n/5;
+        
+        if(wm==0){
+            return w;
+        } else {
+            return w+1;
+        }        
+    }
+}
