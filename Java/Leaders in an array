@@ -1,0 +1,14 @@
+public class Solution {
+    public ArrayList<Integer> solve(ArrayList<Integer> A) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(A.get(A.size()-1));
+        int m = A.get(A.size()-1);
+        for(int i=A.size()-2; i>=0; i--){
+            if(m<A.get(i)){
+                m=A.get(i);
+                arr.add(m);
+            }
+        }
+        return arr;
+    }
+}
