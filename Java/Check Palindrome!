@@ -1,0 +1,30 @@
+public class Solution {
+    public int solve(String a) {
+        int n = a.length();
+        Map<Integer, Integer> m = new HashMap<>();
+        int e = 0;
+        int o = 0;
+        for(char i : a.toCharArray()){
+            int idx = i - 'a';
+            if(m.containsKey(idx)){
+                m.put(idx, m.get(idx)+1);
+            } else {
+                m.put(idx, 1);
+            }
+        }
+        
+        for(int i : m.values()){
+            if(i%2 == 0){
+                e++;
+            } else {
+                o++;
+            }
+        }
+        
+        if(o>1){
+            return 0;
+        } else {
+            return 1;
+        }
+    }
+}
