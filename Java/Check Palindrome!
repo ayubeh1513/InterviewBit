@@ -1,6 +1,7 @@
 public class Solution {
     public int solve(String a) {
-        int n = a.length();
+        int d = a.length();
+        int n = d;
         Map<Integer, Integer> m = new HashMap<>();
         int e = 0;
         int o = 0;
