@@ -1,0 +1,17 @@
+public class Solution {
+    public String solve(String A) {
+        StringBuilder sb = new StringBuilder();
+        
+        for(int c : A.toCharArray()){
+            if(c >= 'a' && c <= 'z'){
+                sb.append((char) (c-32));
+            } else if (c >= 'A' && c <= 'Z'){
+                sb.append((char) (c+32));
+            } else{
+                sb.append(c);
+            }
+        }
+        
+        return sb.toString();
+    }
+}
