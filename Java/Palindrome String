@@ -1,0 +1,21 @@
+public class Solution {
+    public int isPalindrome(String A) {
+        StringBuilder sb = new StringBuilder();
+        for(char i : A.toCharArray()){
+            if((i>=65 && i<=90) || (i>=97 && i<=122) || (i>=48 && i<=57)){
+                sb.append(i);
+            }
+        }
+        A = sb.toString();
+        A = A.toLowerCase();
+        
+        int st=0;
+        int en=A.length()-1;
+        while(st<en){
+            if(A.charAt(st)!=A.charAt(en)) return 0;
+            st++;
+            en--;
+        }
+        return 1;
+    }
+}
